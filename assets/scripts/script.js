@@ -2,9 +2,26 @@
 var generateBtn = document.querySelector("#generate");
 
 function generatePassword() {
-    // code to be ran
-    console.log(generatePassword)
+  var passwordLength = prompt("How many characters would you like your password to be?")
+  console.log(passwordLength);
+  
+  if (passwordLength > 8) {
+    var passwordSymbol = confirm("Would you like symbols in your password?")
+    console.log(passwordSymbol);
+    var passwordNumber = confirm("Would you like numbers in your password?")
+    console.log(passwordNumber);
+    var littleLetter = confirm("Would you like lowercase letters in your password?")
+    console.log(littleLetter);
+    var bigLetters = confirm("Would you like uppercase letters in your password?")
+    console.log(bigLetters);
+  }
+
+  else {
+    alert ("Password must be between 8 and 100 characters!")
+  }
 }
+
+// console.log(generatePassword)
 
 // Write password to the #password input
 function writePassword() {
@@ -15,32 +32,17 @@ function writePassword() {
 
 }
 
+
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
 
 
-// user clicks on a button
 
 
-// collect user input
-// *length
-    // *min 8 characters
-    // *max 128 characters
-// *symbols
-    // *array of symbols
-// *numbers
-    // *array of 0-9
-// *uppercase letters
-    // *pull array of lowercase numbers and change them to uppercase
-// *lowercase letters
-    // *array of a-z
 
-// randomize the input order
 
-// select random characters in each category
-// * random letters
-// * random symbols
-// * random numbers
 
-// display on screen
+
+
+
