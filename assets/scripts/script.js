@@ -28,37 +28,42 @@ function generatePassword() {
   }
   // atleast one type of charater must be true, if not alert must choose atleast one character type
   if (passwordSymbol || passwordNumber || littleLetter || bigLetters) {
-    alert("Your password will now be generated!")
+    alert("Your password will now be generated!");
   }
   
   else {
-    alert("must choose atleast one character type")
+    alert("must choose atleast one character type");
   }
 
   
   // *array of a-z in lowercase
-  var smallAlphabet = ["abcdefghijklmnopqrstuvwxyz".split("")];
+  const smallAlphabet = ["abcdefghijklmnopqrstuvwxyz".split("")];
   console.log(smallAlphabet);
   
   
   // *array of a-z in uppercase
-  var largeAlphabet = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("")];
-  // var largeAlphabet = smallAlphabet.toUpperCase();
-  console.log(largeAlphabet)
+  const largeAlphabet = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("")];
+  // var largeAlphabet = ["smallAlphabet.toUpperCase("")];
+  console.log(largeAlphabet);
   
   
   
   // *array of symbols
-  var symbols = ["!@#$%^&*()_-+={[}};:<>,.?/|".split("")];
+  const symbols = ["!@#$%^&*()_-+={[}};:<>,.?/|".split("")];
   console.log(symbols);
   
   
   
   // *array of 0-9
-  var numbers = ["0123456789".split("")];
+  const numbers = ["0123456789".split("")];
   console.log(numbers);
   
-  //begin building password
+//begin building password
+// use a loop and run it passwordlength
+// loop should make one character at a time
+        // charcter should be pulled from random array and index
+          // math.random and number.floor I think?
+            // only from true charcter types
 
   
 
