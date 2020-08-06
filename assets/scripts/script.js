@@ -37,26 +37,26 @@ function generatePassword() {
 
   
   // *array of a-z in lowercase
-  const smallAlphabet = ["abcdefghijklmnopqrstuvwxyz".split("")];
+  const smallAlphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
   console.log(smallAlphabet);
   
   
   // *array of a-z in uppercase
-  const largeAlphabet = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("")];
+  const largeAlphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
   // var largeAlphabet = ["smallAlphabet.toUpperCase("")];
   console.log(largeAlphabet);
   
   
   
   // *array of symbols
-  const symbols = ["!@#$%^&*()_-+={[}};:<>,.?/|".split("")];
+  const symbols = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "-", "+", "=", "{", "[", "}", "}", ";", ":", "<", ">", ",", ".", "?", "/", "|"];
   console.log(symbols);
   
   
   
   // *array of 0-9
-  const numbers = ["0123456789".split("")];
-  console.log(numbers);
+  const numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+  console.log(numbers[6]);
   
 //begin building password
 // use a loop and run it passwordlength
