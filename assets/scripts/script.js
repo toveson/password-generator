@@ -69,26 +69,28 @@ function generatePassword() {
     if (useNumber) {
       randomness.push(numbers[Math.floor(Math.random() * numbers.length)]);
     }
-    
+
     // get a random number if rondomness is less than passWordLength
     if (useLower) {
       randomness.push(lowercase[Math.floor(Math.random() * lowercase.length)]);
     }
-    
+
     // uppercase
     // get a random number if rondomness is less than passWordLength
     if (useUpper) {
       randomness.push(uppercase[Math.floor(Math.random() * uppercase.length)]);
     }
-  
+
+  }
+  var builtPW = [];
+  console.log(builtPW);
+  // loop runs password length that pulls from randomness
+  for (let i = 0; i < passwordLength; i++) {
+
+    builtPW.push(randomness[Math.floor(Math.random() * randomness.length)]);
   }
 
-  // loop runs password length that pulls from randomness
-
-
-
-  console.log(randomness);
-  return randomness.join("");
+  return builtPW.join("");
 }
 
 
