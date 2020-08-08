@@ -1,7 +1,7 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 // *array of symbols
-let symbols = "!@#$%^&*()_-+={[]}|\,.?/<>".split("");
+let symbols = "!@#$%^&*()_-+={[]}|,.?/<>".split("");
 // *array of 0-9
 let numbers = "0123456789".split("");
 // *array of a-z in lowercase
@@ -17,84 +17,78 @@ var useUpper;
 
 // collect user input
 function generatePassword() {
-  var passwordLength = prompt("How many characters would you like your password to be?");
+  var passwordLength = prompt("How many characters would you like your password to be?").trim();
   console.log(passwordLength);
 
   // length
   // (min 8 characters and max of 128)
   if (passwordLength > 7 && passwordLength < 129) {
-  //   // confirm if user wants symbols
-  //   var passwordSymbol = confirm("Would you like symbols in your password?");
-  //   console.log(passwordSymbol);
-  //   // confirm if user wants numbers   
-  //   var passwordNumber = confirm("Would you like numbers in your password?");
-  //   console.log(passwordNumber);
-  //   // confirm if user wants lowercase letters
-  //   var littleLetter = confirm("Would you like lowercase letters in your password?");
-  //   console.log(littleLetter);
-  //   // confirm if user wants uppercase letters
-  //   var bigLetters = confirm("Would you like uppercase letters in your password?");
-  //   console.log(bigLetters);
-  // }
+    // confirm if user wants symbols
+    useSymbol = confirm("Would you like symbols in your password?");
+    console.log(useSymbol);
+    // confirm if user wants numbers   
+    useNumber = confirm("Would you like numbers in your password?");
+    console.log(useNumber);
+    // confirm if user wants lowercase letters
+    useLower = confirm("Would you like lowercase letters in your password?");
+    console.log(useLower);
+    // confirm if user wants uppercase letters
+    useUpper = confirm("Would you like uppercase letters in your password?");
+    console.log(useUpper);
+  }
   //check password length
   else {
     alert("Password must be between 8 and 128 characters!")
   }
   // atleast one type of charater must be true, if not alert must choose atleast one character type
-  if (passwordSymbol || passwordNumber || littleLetter || bigLetters) {
+  if (useSymbol || useNumber || useLower || useUpper) {
     alert("Your password will now be generated!");
   }
 
   else {
     alert("must choose atleast one character type");
   }
-  
 
-
-
-
-  // math.random and number.floor I think?
-  // only from true charcter types
-  // console.log("---randomSmall---")
-
-
-
-
+  // randomness will be each true user input from loop. 
+  //each user input will be stored passwordLength
+  // randomness will then be used to make PW 
   var randomness = [];
+
+
   //begin building password
   // use a loop and run it passwordlength
 
   for (let i = 0; i < passwordLength; i++) {
-    let randomSmall = smallAlphabet[Math.floor(Math.random() * smallAlphabet.length)];
-    // console.log(randomSmall)
-
-    // console.log("---randomBig---")
-    let randomBig = largeAlphabet[Math.floor(Math.random() * largeAlphabet.length)];
-    // console.log(randomBig);
+    // get a random symbol if rondomness is less than passWordLength
+    if (useSymbol) {
+      randomness.push(symbols[Math.floor(Math.random() * symbols.length)]);
+    }
 
 
-    // console.log("---randomSymbol---")
-    let randomSymbol = symbols[Math.floor(Math.random() * symbols.length)];
-    // console.log(randomSymbol)
-
-    // console.log("---randomNumbers---")
-    let randomNumber = numbers[Math.floor(Math.random() * numbers.length)];
-    // console.log(randomNumber);
-    let characters = [randomSmall, randomBig, randomSymbol, randomNumber]
-    // console.log(characters);
-
-    let randomChar = characters[Math.floor(Math.random() * characters.length)];
-    // console.log(randomChar);
-    // loop should make one character at a time
-    // charcter should be pulled from random______ one at a time
-    // should only pull from true user choices
-    randomness = randomness + randomChar;
+    // get a random number if rondomness is less than passWordLength
+    if (useNumber) {
+      randomness.push(numbers[Math.floor(Math.random() * numbers.length)]);
+    }
+    
+    // get a random number if rondomness is less than passWordLength
+    if (useLower) {
+      randomness.push(lowercase[Math.floor(Math.random() * lowercase.length)]);
+    }
+    
+    // uppercase
+    // get a random number if rondomness is less than passWordLength
+    if (useUpper) {
+      randomness.push(uppercase[Math.floor(Math.random() * uppercase.length)]);
+    }
+  
   }
+
+  // loop runs password length that pulls from randomness
 
 
 
   console.log(randomness);
-  return randomness;
+  return randomness.join("");
 }
 
 
