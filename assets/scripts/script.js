@@ -66,7 +66,7 @@ function generatePassword() {
     
     // console.log("---randomBig---")
     let randomBig = largeAlphabet[Math.floor(Math.random() * largeAlphabet.length)];
-    console.log(randomBig);
+    // console.log(randomBig);
     
     
     // console.log("---randomSymbol---")
@@ -80,7 +80,7 @@ function generatePassword() {
     // console.log(characters);
     
     let randomChar = characters[Math.floor(Math.random() * characters.length)];
-    console.log(randomChar);
+    // console.log(randomChar);
     // loop should make one character at a time
     // charcter should be pulled from random______ one at a time
     // should only pull from true user choices
@@ -90,7 +90,7 @@ function generatePassword() {
 
 
   console.log(randomness);
-  
+  return randomness;
 }
 
 
