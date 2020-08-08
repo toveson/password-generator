@@ -52,35 +52,36 @@ function generatePassword() {
   // math.random and number.floor I think?
   // only from true charcter types
   // console.log("---randomSmall---")
-  let randomSmall = smallAlphabet[Math.floor(Math.random() * smallAlphabet.length)];
-  // console.log(randomSmall)
-
-  // console.log("---randomBig---")
-  let randomBig = largeAlphabet[Math.floor(Math.random() * largeAlphabet.length)];
-  // console.log(randomBig);
-
-
-  // console.log("---randomSymbol---")
-  let randomSymbol = symbols[Math.floor(Math.random() * symbols.length)];
-  // console.log(randomSymbol)
-
-  // console.log("---randomNumbers---")
-  let randomNumber = numbers[Math.floor(Math.random() * numbers.length)];
-  // console.log(randomNumber);
-
-
-  let characters = [randomSmall, randomBig, randomSymbol, randomNumber]
-  console.log(characters);
-
-
-
-
+  
+  
+  
+  
+  
   //begin building password
   // use a loop and run it passwordlength
-
+  
   for (let i = 0; i < passwordLength; i++) {
+    let randomSmall = smallAlphabet[Math.floor(Math.random() * smallAlphabet.length)];
+    // console.log(randomSmall)
+  
+    // console.log("---randomBig---")
+    let randomBig = largeAlphabet[Math.floor(Math.random() * largeAlphabet.length)];
+    console.log(randomBig);
+  
+  
+    // console.log("---randomSymbol---")
+    let randomSymbol = symbols[Math.floor(Math.random() * symbols.length)];
+    // console.log(randomSymbol)
+  
+    // console.log("---randomNumbers---")
+    let randomNumber = numbers[Math.floor(Math.random() * numbers.length)];
+    // console.log(randomNumber);
+    let characters = [randomSmall, randomBig, randomSymbol, randomNumber]
+    // console.log(characters);
+    
+    let randomChar = characters[Math.floor(Math.random() * characters.length)];
+    console.log(randomChar);
     // loop should make one character at a time
-    console.log(randomChars)
     // charcter should be pulled from random______ one at a time
     // should only pull from true user choices
 
