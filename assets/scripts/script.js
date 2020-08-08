@@ -5,7 +5,7 @@ var generateBtn = document.querySelector("#generate");
 function generatePassword() {
   var passwordLength = prompt("How many characters would you like your password to be?");
   console.log(passwordLength);
-  
+
   // length
   // (min 8 characters and max of 128)
   if (passwordLength > 7 && passwordLength < 129) {
@@ -22,56 +22,77 @@ function generatePassword() {
     var bigLetters = confirm("Would you like uppercase letters in your password?");
     console.log(bigLetters);
   }
-    //check password length
+  //check password length
   else {
-    alert ("Password must be between 8 and 128 characters!")
+    alert("Password must be between 8 and 128 characters!")
   }
   // atleast one type of charater must be true, if not alert must choose atleast one character type
   if (passwordSymbol || passwordNumber || littleLetter || bigLetters) {
     alert("Your password will now be generated!");
   }
-  
+
   else {
     alert("must choose atleast one character type");
   }
 
-  
+
   // *array of a-z in lowercase
-  const smallAlphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-  console.log(smallAlphabet);
-  
-  
+  let smallAlphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+
+  // let smallAlphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
+  // console.log("smallAlphabet length = " + smallAlphabet.length);
+
+
   // *array of a-z in uppercase
-  const largeAlphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-  // var largeAlphabet = ["smallAlphabet.toUpperCase("")];
-  console.log(largeAlphabet);
-  
-  
-  
+  let largeAlphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+  // var largeAlphabet = smallAlphabet.lower
+  // console.log("largeAlphabet length = " + largeAlphabet.length);
+
+
+
   // *array of symbols
-  const symbols = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "-", "+", "=", "{", "[", "}", "}", ";", ":", "<", ">", ",", ".", "?", "/", "|"];
-  console.log(symbols);
-  
-  
-  
+  let symbols = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "-", "+", "=", "{", "[", "}", "}", ";", ":", "<", ">", ",", ".", "?", "/", "|"];
+  // console.log("symbols length = " + symbols.length);
+
+
+
   // *array of 0-9
-  const numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-  console.log(numbers[6]);
-  
-//begin building password
-// use a loop and run it passwordlength
-// loop should make one character at a time
-        // charcter should be pulled from random array and index
-          // math.random and number.floor I think?
-            // only from true charcter types
+  let numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+  // console.log("numbers length = " + numbers.length);
 
+  // math.random and number.floor I think?
+  // only from true charcter types
+  console.log("---smallAlphabet---")
+    let randomSmall = smallAlphabet [Math.floor(Math.random() * 27)];
+    console.log(randomSmall);
   
+    console.log("---largeAlphabet---")
+    let randomBig = largeAlphabet [Math.floor(Math.random() * 27)];
+    console.log(randomBig);
+  
+  
+    console.log("---symbols---")
+    let randomSymbol = symbols [Math.floor(Math.random() * 28)];
+    console.log(randomSymbol)
+  
+    console.log("---numbers---")
+    let randomNumber = numbers [Math.floor(Math.random() * 11)];
+    console.log(randomNumber);
 
-  
-  
+
+
+
+  //begin building password
+  // use a loop and run it passwordlength
+
+  for (var i = 0; i < passwordLength; i++) {
+
+    // loop should make one character at a time
+    // charcter should be pulled from random array and index
+
+  }
+
 }
-
-
 // console.log(generatePassword)
 
 // Write password to the #password input
@@ -86,14 +107,3 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-
-
-
-
-
-
-
-
-
-
-
