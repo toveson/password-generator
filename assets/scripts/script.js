@@ -24,10 +24,10 @@ function generatePassword() {
     // confirm if user wants uppercase letters
     useUpper = confirm("Would you like uppercase letters in your password?");
   }
-  
   //check password length
   else {
     alert("Password must be between 8 and 128 characters!")
+    generatePassword();
   }
   // atleast one type of charater must be true, if not alert must choose atleast one character type
   if (useSymbol || useNumber || useLower || useUpper) {
