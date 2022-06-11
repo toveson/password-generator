@@ -6,7 +6,7 @@
 
 # Random password generator
 
-This is a random password generator. It takes user input to make a random password baised off of the user inputs. once all user inputs are finished a password is created that the user is able to copy from the screen. Update for forking demo.
+This is a random password generator. It takes user input to make a random password baised off of the user inputs. once all user inputs are finished a password is created that the user is able to copy from the screen.
 
 ## Technologies
 * HTML
